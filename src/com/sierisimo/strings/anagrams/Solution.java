@@ -1,7 +1,7 @@
 package com.sierisimo.strings.anagrams;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.sierisimo.common.MergeClass;
+
 import java.util.Scanner;
 
 /**
@@ -9,23 +9,22 @@ import java.util.Scanner;
  */
 public class Solution {
     private static String sortLexicographic(String arg) {
-        char tmp;
-
+        char[] sorted = mergeSort(arg);
+        System.out.println(new String(sorted));
         return "";
     }
 
-    private static char[] mergeSort(String arg, List<char[]> prevList) {
-        if (arg.isEmpty())
-            throw new RuntimeException("Arguments to merge sort should be a string with length greater than zero");
+    private static char[] mergeSort(String arg) {
+        System.out.println("Starting mergeSort with: " + arg);
 
         if (arg.length() == 1) return arg.toCharArray();
 
-        char[] chars = arg.toCharArray();
         char[] result = new char[arg.length()];
 
-        char tmp;
+        if (arg.length() == 2) {
+            char[] chars = arg.toCharArray();
+            char tmp;
 
-        if (chars.length == 2) {
             if (chars[0] > chars[1]) {
                 tmp = chars[0];
                 chars[1] = chars[0];
@@ -34,11 +33,10 @@ public class Solution {
 
             return chars;
         } else {
-            List<char[]> lists = prevList;
-            if (lists == null) lists = new ArrayList<>();
-
-            lists.add(mergeSort(arg.substring(0, arg.length() / 2), lists));
-            System.out.println(lists);
+            char[] hold;
+            for (int i = 0; i < result.length; i++){
+//                hold =
+            }
         }
 
         return result;
@@ -47,9 +45,13 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String a = scanner.next();
-        String b = scanner.next();
-
-
+//        String a = scanner.next();
+//        String b = scanner.next();
+//
+//        sortLexicographic(a);
+        int[] sorted = MergeClass.mergeSort(new int[]{10,9,1,5,7,3,8,4,3,-1});
+        for (int i = 0; i < sorted.length; i++){
+            System.out.println(sorted[i]);
+        }
     }
 }
