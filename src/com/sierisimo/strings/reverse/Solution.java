@@ -1,4 +1,4 @@
-package com.sierisimo.strings.stringreverse;
+package com.sierisimo.strings.reverse;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.sierisimo.strings.stringsintroduction;
+package com.sierisimo.strings.introduction;
 
 import java.util.Scanner;
 

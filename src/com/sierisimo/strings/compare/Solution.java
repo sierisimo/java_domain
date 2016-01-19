@@ -1,4 +1,4 @@
-package com.sierisimo.strings.stringcompare;
+package com.sierisimo.strings.compare;
 
 import java.util.Scanner;
 
